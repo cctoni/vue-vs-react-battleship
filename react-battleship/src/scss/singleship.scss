@@ -105,7 +105,6 @@ mark {
   border: 2px solid $primary;
   display: block;
   font-size: 14px;
-  font-size: 20px;
   height: 30px;
   padding: 2.5px;
   position: absolute;
@@ -114,14 +113,19 @@ mark {
   width: 30px;
 }
 
-.shipcard-enter-active {
-  animation-duration: 2s;
-  animation-fill-mode: both;
-  animation-name: zoomIn;
+.myCirclebar {
+  height: 120px;
 }
 
-.shipcard-leave-active {
-  animation-duration: 1s;
-  animation-fill-mode: both;
-  animation-name: fadeOutLeft;
+.myCirclebar .CircularProgressbar-path {
+  stroke: rgba($primary, .8);
+}
+.myCirclebar .CircularProgressbar-trail {
+  stroke: rgba(white, .4);
+}
+.myCirclebar .CircularProgressbar-text {
+  fill: white;
+}
+.myCirclebar .CircularProgressbar-background {
+  fill: white;
 }
