@@ -1,0 +1,127 @@
+$primary: #CB3042;
+
+.singleship {
+  display: flex;
+  margin-bottom: 60px;
+  transition: all .25s;
+}
+
+.singleship__header {
+  background-color: $primary;
+  background-image: url(/assets/sourcewars_bg.svg);
+  background-position: 20px 140px;
+  background-size: 40%;
+  border-radius: 20px;
+  flex-shrink: 0;
+  width: 400px;
+  z-index: 400;
+}
+
+.singleship__image {
+  left: -100px;
+  overflow: hidden;
+  position: absolute;
+
+  img {
+    height: 250px;
+  }
+}
+
+.singleship__content {
+  background-image: linear-gradient(-180deg, rgba(#0F2231, .8) 0%, rgba(#101C2C, .8) 59%, rgba(#311D28, .9) 100%), url("/assets/death_star_bg.png");
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px 20px rgba(black, .8);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0 50px -250px;
+  min-height: 350px;
+  padding: 30px 30px 30px 250px;
+  position: relative;
+  width: 100%;
+  z-index: 500;
+}
+
+.singleship__headline {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.singleship__price {
+  font-size: 42px;
+  font-weight: 100;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.singleship__label {
+  color: rgba(255, 255, 255, .5);
+  filter: blur(.8px);
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.singleship__value {
+  border-radius: 20px;
+  border: 1px solid $primary;
+  flex-grow: 0;
+  font-weight: 100;
+  margin-bottom: 20px;
+  padding: 5px 30px;;
+}
+
+.singleship__details {
+  display: flex;
+  margin-bottom: 20px;
+
+  &--left {
+    align-items: flex-start;
+    border-right: 2px solid rgba(white, .2);
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+    flex-grow: 0;
+    margin-right: 20px;
+    text-align: left;
+  }
+
+  &--right {
+    align-items: center;
+    display: flex;
+    margin: auto;
+  }
+}
+
+mark {
+  background-color: rgba(white, .8);
+  border-radius: 50%;
+  border: 2px solid $primary;
+  display: block;
+  font-size: 14px;
+  font-size: 20px;
+  height: 30px;
+  padding: 2.5px;
+  position: absolute;
+  right: 0;
+  top: -10px;
+  width: 30px;
+}
+
+.shipcard-enter-active {
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-name: zoomIn;
+}
+
+.shipcard-leave-active {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: fadeOutLeft;
+}
